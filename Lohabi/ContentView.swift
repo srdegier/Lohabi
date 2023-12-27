@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color(UIColor.secondarySystemBackground))
+            .navigationTitle("Lohabi")
+            .toolbarBackground(
+                BackgroundStyle(),
+                for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
         }
-        .padding()
     }
 }
 
