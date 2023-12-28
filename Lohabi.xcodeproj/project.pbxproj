@@ -12,6 +12,7 @@
 		870CCC502B3C518E0042C976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 870CCC4F2B3C518E0042C976 /* Assets.xcassets */; };
 		870CCC532B3C518E0042C976 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 870CCC522B3C518E0042C976 /* Preview Assets.xcassets */; };
 		87BFB7362B3DF4310069456C /* AddLohabiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7352B3DF4310069456C /* AddLohabiView.swift */; };
+		87BFB7392B3E0DE30069456C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7382B3E0DE30069456C /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		870CCC4F2B3C518E0042C976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		870CCC522B3C518E0042C976 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		87BFB7352B3DF4310069456C /* AddLohabiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLohabiView.swift; sourceTree = "<group>"; };
+		87BFB7382B3E0DE30069456C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		870CCC4A2B3C518D0042C976 /* Lohabi */ = {
 			isa = PBXGroup;
 			children = (
+				87BFB7372B3E0DCE0069456C /* Settings */,
 				87BFB7342B3DF4040069456C /* AddLohabi */,
 				870CCC4B2B3C518D0042C976 /* LohabiApp.swift */,
 				870CCC4D2B3C518D0042C976 /* ContentView.swift */,
@@ -76,6 +79,14 @@
 				87BFB7352B3DF4310069456C /* AddLohabiView.swift */,
 			);
 			path = AddLohabi;
+			sourceTree = "<group>";
+		};
+		87BFB7372B3E0DCE0069456C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				87BFB7382B3E0DE30069456C /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				870CCC4E2B3C518D0042C976 /* ContentView.swift in Sources */,
+				87BFB7392B3E0DE30069456C /* SettingsView.swift in Sources */,
 				870CCC4C2B3C518D0042C976 /* LohabiApp.swift in Sources */,
 				87BFB7362B3DF4310069456C /* AddLohabiView.swift in Sources */,
 			);

@@ -47,6 +47,7 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Lohabi")
+            .navigationBarItems(trailing: settingsButton)
             .toolbarBackground(
                 BackgroundStyle(),
                 for: .navigationBar)
@@ -56,6 +57,15 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showAddLohabiSheet) {
             AddLohabiView()
+        }
+    }
+    
+    var settingsButton: some View {
+        NavigationLink(destination: SettingsView()) {
+            Image(systemName: "gear")
+                .imageScale(.large)
+                .padding()
+
         }
     }
 }
