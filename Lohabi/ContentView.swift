@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var showAddLohabiSheet = false
     
     var body: some View {
-        NavigationStack {
+        LohabiNavigationStack {
             ZStack(alignment: .bottomLeading) {
                 ScrollView() {
                     // Demo for Lohabi cards
@@ -48,11 +48,6 @@ struct ContentView: View {
             }
             .navigationTitle("Lohabi")
             .navigationBarItems(trailing: settingsButton)
-            .toolbarBackground(
-                BackgroundStyle(),
-                for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
-            .background(Color(UIColor.secondarySystemBackground))
             .ignoresSafeArea(edges: [.bottom])
         }
         .sheet(isPresented: $showAddLohabiSheet) {
@@ -65,7 +60,6 @@ struct ContentView: View {
             Image(systemName: "gear")
                 .imageScale(.large)
                 .padding()
-
         }
     }
 }
