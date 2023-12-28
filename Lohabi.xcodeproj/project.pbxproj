@@ -58,10 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				87BFB7402B3E2FE40069456C /* Components */,
-				87BFB7372B3E0DCE0069456C /* Settings */,
-				87BFB7342B3DF4040069456C /* AddLohabi */,
-				870CCC4B2B3C518D0042C976 /* LohabiApp.swift */,
-				870CCC4D2B3C518D0042C976 /* ContentView.swift */,
+				87BFB7432B3E38680069456C /* Views */,
 				870CCC4F2B3C518E0042C976 /* Assets.xcassets */,
 				870CCC512B3C518E0042C976 /* Preview Content */,
 			);
@@ -98,6 +95,17 @@
 				87BFB7412B3E2FFE0069456C /* LohabiNavigationStack.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		87BFB7432B3E38680069456C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87BFB7342B3DF4040069456C /* AddLohabi */,
+				87BFB7372B3E0DCE0069456C /* Settings */,
+				870CCC4B2B3C518D0042C976 /* LohabiApp.swift */,
+				870CCC4D2B3C518D0042C976 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
