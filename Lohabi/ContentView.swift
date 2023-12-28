@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var showAddLohabiSheet = false
+    
     var body: some View {
         NavigationStack {
             ZStack(alignment: .bottomLeading) {
@@ -16,7 +19,7 @@ struct ContentView: View {
                     VStack(spacing: 24) {
                         ForEach(0 ..< 6) { item in
                             RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.white)
+                                .fill(BackgroundStyle())
                                 .frame(height: 130)
                                 .shadow(radius: 0.5)
                         }
@@ -26,11 +29,11 @@ struct ContentView: View {
                 .padding(.bottom, 70)
                 ZStack {
                     RoundedRectangle(cornerRadius: 80)
-                        .fill(Color.white)
+                        .fill(BackgroundStyle())
                         .frame(maxWidth: .infinity, maxHeight: 80)
                         .shadow(radius: 0.5)
                     Button(action: {
-                
+                        showAddLohabiSheet.toggle()
                     }) {
                         Image(systemName: "plus")
                             .font(.system(size: 35))
@@ -50,6 +53,9 @@ struct ContentView: View {
             .toolbarBackground(.visible, for: .navigationBar)
             .background(Color(UIColor.secondarySystemBackground))
             .ignoresSafeArea(edges: [.bottom])
+        }
+        .sheet(isPresented: $showAddLohabiSheet) {
+            AddLohabiView()
         }
     }
 }
