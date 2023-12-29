@@ -13,8 +13,9 @@ struct ContentView: View {
     
     var body: some View {
         LohabiNavigationStack {
-            ZStack(alignment: .bottomLeading) {
-                lohabiScrollView
+            ZStack(alignment: .bottom) {
+                //lohabiScrollView
+                lohabiEmptyView
                 addFooterView
             }
             .navigationTitle("Lohabi")
@@ -36,18 +37,37 @@ struct ContentView: View {
     
     var lohabiScrollView: some View {
         ScrollView() {
-            // Demo for Lohabi cards
-            VStack(spacing: 24) {
-                ForEach(0 ..< 6) { item in
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(BackgroundStyle())
-                        .frame(height: 130)
-                        .shadow(radius: 0.5)
-                }
-            }
-            .padding(24)
+            lohabiCellsView
         }
         .padding(.bottom, 70)
+    }
+    
+    var lohabiCellsView: some View {
+        // Demo for Lohabi cards
+        VStack(spacing: 24) {
+            ForEach(0 ..< 6) { item in
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(BackgroundStyle())
+                    .frame(height: 130)
+                    .shadow(radius: 0.5)
+            }
+        }
+        .padding(24)
+    }
+    
+    var lohabiEmptyView: some View {
+        VStack() {
+            // TODO: Add localization in this project
+            Text("It seem like you have not added a 'Lohabi'. Add one by tapping the button below yet")
+                .font(.headline)
+                .foregroundColor(Color.gray)
+                .multilineTextAlignment(.center)
+                .padding()
+            Image(systemName: "arrow.down")
+                .font(.system(size: 70))
+                .foregroundColor(.gray)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     
     var addFooterView: some View {
