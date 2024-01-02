@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @EnvironmentObject var defaultsManager: UserDefaultsManager
+    var onboardingManager = OnboardingManager()
     @State private var showAddLohabiSheet = false
     
     var body: some View {
@@ -25,6 +26,10 @@ struct ContentView: View {
         .sheet(isPresented: $showAddLohabiSheet) {
             AddLohabiView()
         }
+        .fullScreenCover(isPresented: $defaultsManager.needsOnboarding, content: {
+            OnboardingView()
+                .environmentObject(onboardingManager)
+        })
     }
     
     var settingsButton: some View {
@@ -57,7 +62,6 @@ struct ContentView: View {
     
     var lohabiEmptyView: some View {
         VStack() {
-            // TODO: Add localization in this project
             Text("It seem like you have not added a 'Lohabi'. Add one by tapping the button below yet")
                 .font(.headline)
                 .foregroundColor(Color.gray)
@@ -93,4 +97,11 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(UserDefaultsManager())
+}
+
+#Preview("Dutch") {
+    ContentView()
+        .environmentObject(UserDefaultsManager())
+        .environment(\.locale, Locale(identifier: "NL"))
 }
