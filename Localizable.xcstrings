@@ -1,0 +1,109 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "Add Lohabi" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lohabi toevoegen"
+          }
+        }
+      }
+    },
+    "All done" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helemaal Klaar"
+          }
+        }
+      }
+    },
+    "All Done" : {
+
+    },
+    "Custom Navigation" : {
+
+    },
+    "Description" : {
+
+    },
+    "Finish" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afronden"
+          }
+        }
+      }
+    },
+    "It seem like you have not added a 'Lohabi'. Add one by tapping the button below yet" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het ziet er naar uit dat je nog geen \"Lohabi\" hebt aangemaakt. Voeg er één toe door te drukken op het plusje onderaan."
+          }
+        }
+      }
+    },
+    "Let's start by setting up some important settings so that the app functions properly." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laten we beginnen met het instellen van enkele belangrijke instellingen, zodat de app goed functioneert."
+          }
+        }
+      }
+    },
+    "Lohabi" : {
+
+    },
+    "Next" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volgende"
+          }
+        }
+      }
+    },
+    "Onboarding Reset" : {
+
+    },
+    "Settings" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instellingen"
+          }
+        }
+      }
+    },
+    "Titel" : {
+
+    },
+    "Welcome at Lohabi" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welkom bij Lohabi"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
