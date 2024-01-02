@@ -14,8 +14,7 @@
         }
       }
     },
-    "All done" : {
-      "extractionState" : "stale",
+    "All Done" : {
       "localizations" : {
         "nl" : {
           "stringUnit" : {
@@ -25,8 +24,15 @@
         }
       }
     },
-    "All Done" : {
-
+    "Always Allow Location Access" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sta Locatie Toegang Altijd Toe"
+          }
+        }
+      }
     },
     "Custom Navigation" : {
 
@@ -34,13 +40,12 @@
     "Description" : {
 
     },
-    "Finish" : {
-      "extractionState" : "stale",
+    "Enable Later in Settings" : {
       "localizations" : {
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Afronden"
+            "value" : "Schakel Later aan in Instellingen"
           }
         }
       }
@@ -61,6 +66,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Laten we beginnen met het instellen van enkele belangrijke instellingen, zodat de app goed functioneert."
+          }
+        }
+      }
+    },
+    "Location Permission" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Locatie Toestemming"
           }
         }
       }
@@ -93,6 +108,16 @@
     },
     "Titel" : {
 
+    },
+    "To ensure the app accurately verifies your location even when you're not actively using your iPhone, we need your permission to constantly access your location." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om ervoor te zorgen dat de app je locatie nauwkeurig kan controleren, zelfs wanneer je je iPhone niet actief gebruikt, hebben we jouw toestemming nodig om te allen tijde toegang te hebben tot je locatie."
+          }
+        }
+      }
     },
     "Welcome at Lohabi" : {
       "localizations" : {
