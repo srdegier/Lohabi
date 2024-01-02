@@ -14,6 +14,15 @@
 		87BFB7362B3DF4310069456C /* AddLohabiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7352B3DF4310069456C /* AddLohabiView.swift */; };
 		87BFB7392B3E0DE30069456C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7382B3E0DE30069456C /* SettingsView.swift */; };
 		87BFB7422B3E2FFE0069456C /* LohabiNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7412B3E2FFE0069456C /* LohabiNavigationStack.swift */; };
+		87BFB7462B40D9040069456C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7452B40D9030069456C /* OnboardingView.swift */; };
+		87BFB7482B41AA290069456C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7472B41AA290069456C /* WelcomeView.swift */; };
+		87BFB74A2B41AA840069456C /* FinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7492B41AA840069456C /* FinishedView.swift */; };
+		87BFB74C2B41C28E0069456C /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB74B2B41C28E0069456C /* OnboardingContentView.swift */; };
+		87BFB7502B41D21E0069456C /* LocationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB74F2B41D21E0069456C /* LocationPermissionView.swift */; };
+		87E3FB752B447F640033A085 /* LohabiPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E3FB742B447F640033A085 /* LohabiPrimaryButton.swift */; };
+		87E3FB782B448AB10033A085 /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E3FB772B448AB10033A085 /* OnboardingManager.swift */; };
+		87E3FB7A2B4492010033A085 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E3FB792B4492010033A085 /* UserDefaultsManager.swift */; };
+		87E3FB7C2B44B21A0033A085 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 87E3FB7B2B44B21A0033A085 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +34,15 @@
 		87BFB7352B3DF4310069456C /* AddLohabiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLohabiView.swift; sourceTree = "<group>"; };
 		87BFB7382B3E0DE30069456C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		87BFB7412B3E2FFE0069456C /* LohabiNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LohabiNavigationStack.swift; sourceTree = "<group>"; };
+		87BFB7452B40D9030069456C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		87BFB7472B41AA290069456C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		87BFB7492B41AA840069456C /* FinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedView.swift; sourceTree = "<group>"; };
+		87BFB74B2B41C28E0069456C /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
+		87BFB74F2B41D21E0069456C /* LocationPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionView.swift; sourceTree = "<group>"; };
+		87E3FB742B447F640033A085 /* LohabiPrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LohabiPrimaryButton.swift; sourceTree = "<group>"; };
+		87E3FB772B448AB10033A085 /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
+		87E3FB792B4492010033A085 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		87E3FB7B2B44B21A0033A085 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +59,7 @@
 		870CCC3F2B3C518D0042C976 = {
 			isa = PBXGroup;
 			children = (
+				87E3FB7B2B44B21A0033A085 /* Localizable.xcstrings */,
 				870CCC4A2B3C518D0042C976 /* Lohabi */,
 				870CCC492B3C518D0042C976 /* Products */,
 			);
@@ -57,6 +76,7 @@
 		870CCC4A2B3C518D0042C976 /* Lohabi */ = {
 			isa = PBXGroup;
 			children = (
+				87E3FB762B448A980033A085 /* Managers */,
 				87BFB7402B3E2FE40069456C /* Components */,
 				87BFB7432B3E38680069456C /* Views */,
 				870CCC4F2B3C518E0042C976 /* Assets.xcassets */,
@@ -93,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				87BFB7412B3E2FFE0069456C /* LohabiNavigationStack.swift */,
+				87BFB74B2B41C28E0069456C /* OnboardingContentView.swift */,
+				87E3FB742B447F640033A085 /* LohabiPrimaryButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -100,12 +122,33 @@
 		87BFB7432B3E38680069456C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				87BFB7442B40B4820069456C /* Onboarding */,
 				87BFB7342B3DF4040069456C /* AddLohabi */,
 				87BFB7372B3E0DCE0069456C /* Settings */,
 				870CCC4B2B3C518D0042C976 /* LohabiApp.swift */,
 				870CCC4D2B3C518D0042C976 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		87BFB7442B40B4820069456C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				87BFB7452B40D9030069456C /* OnboardingView.swift */,
+				87BFB7472B41AA290069456C /* WelcomeView.swift */,
+				87BFB74F2B41D21E0069456C /* LocationPermissionView.swift */,
+				87BFB7492B41AA840069456C /* FinishedView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		87E3FB762B448A980033A085 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				87E3FB772B448AB10033A085 /* OnboardingManager.swift */,
+				87E3FB792B4492010033A085 /* UserDefaultsManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +193,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nl,
 			);
 			mainGroup = 870CCC3F2B3C518D0042C976;
 			productRefGroup = 870CCC492B3C518D0042C976 /* Products */;
@@ -168,6 +212,7 @@
 			files = (
 				870CCC532B3C518E0042C976 /* Preview Assets.xcassets in Resources */,
 				870CCC502B3C518E0042C976 /* Assets.xcassets in Resources */,
+				87E3FB7C2B44B21A0033A085 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,9 +225,17 @@
 			files = (
 				87BFB7422B3E2FFE0069456C /* LohabiNavigationStack.swift in Sources */,
 				870CCC4E2B3C518D0042C976 /* ContentView.swift in Sources */,
+				87E3FB782B448AB10033A085 /* OnboardingManager.swift in Sources */,
+				87E3FB752B447F640033A085 /* LohabiPrimaryButton.swift in Sources */,
+				87BFB74C2B41C28E0069456C /* OnboardingContentView.swift in Sources */,
 				87BFB7392B3E0DE30069456C /* SettingsView.swift in Sources */,
+				87BFB7462B40D9040069456C /* OnboardingView.swift in Sources */,
+				87BFB74A2B41AA840069456C /* FinishedView.swift in Sources */,
+				87BFB7502B41D21E0069456C /* LocationPermissionView.swift in Sources */,
 				870CCC4C2B3C518D0042C976 /* LohabiApp.swift in Sources */,
+				87E3FB7A2B4492010033A085 /* UserDefaultsManager.swift in Sources */,
 				87BFB7362B3DF4310069456C /* AddLohabiView.swift in Sources */,
+				87BFB7482B41AA290069456C /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
