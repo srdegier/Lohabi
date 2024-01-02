@@ -12,11 +12,16 @@ struct LocationPermissionView: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            OnboardingContentView(imageName: "TestImage", title: "", description: "")
-            VStack {
-                LohabiPrimaryButton(text: "Next") {
-                    onboardingManager.onboardingStep = .finishedStep
+            OnboardingContentView(imageName: "OnboardingLocationPermission", title: "Location Permission", description: "To ensure the app accurately verifies your location even when you're not actively using your iPhone, we need your permission to constantly access your location.")
+            VStack(spacing: 0) {
+                LohabiPrimaryButton(text: "Always Allow Location Access") {
+                    //onboardingManager.onboardingStep = .finishedStep
                 }
+                .padding(.vertical, 8)
+                LohabiSecondaryButton(text: "Enable Later in Settings") {
+                    
+                }
+                .padding(.vertical, 8)
             }
         }
     }
