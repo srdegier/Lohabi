@@ -23,6 +23,5 @@ struct LohabiPrimaryButton: View {
                 .cornerRadius(16)
         })
         .padding(.horizontal, 24)
-        .padding(.vertical)
     }
 }
