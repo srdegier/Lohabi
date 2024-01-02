@@ -23,6 +23,7 @@
 		87E3FB782B448AB10033A085 /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E3FB772B448AB10033A085 /* OnboardingManager.swift */; };
 		87E3FB7A2B4492010033A085 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E3FB792B4492010033A085 /* UserDefaultsManager.swift */; };
 		87E3FB7C2B44B21A0033A085 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 87E3FB7B2B44B21A0033A085 /* Localizable.xcstrings */; };
+		87E3FB7E2B44CBCE0033A085 /* LohabiSecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E3FB7D2B44CBCE0033A085 /* LohabiSecondaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		87E3FB772B448AB10033A085 /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
 		87E3FB792B4492010033A085 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		87E3FB7B2B44B21A0033A085 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		87E3FB7D2B44CBCE0033A085 /* LohabiSecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LohabiSecondaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				87BFB7412B3E2FFE0069456C /* LohabiNavigationStack.swift */,
 				87BFB74B2B41C28E0069456C /* OnboardingContentView.swift */,
 				87E3FB742B447F640033A085 /* LohabiPrimaryButton.swift */,
+				87E3FB7D2B44CBCE0033A085 /* LohabiSecondaryButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				87E3FB7A2B4492010033A085 /* UserDefaultsManager.swift in Sources */,
 				87BFB7362B3DF4310069456C /* AddLohabiView.swift in Sources */,
 				87BFB7482B41AA290069456C /* WelcomeView.swift in Sources */,
+				87E3FB7E2B44CBCE0033A085 /* LohabiSecondaryButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
