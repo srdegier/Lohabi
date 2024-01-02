@@ -17,6 +17,7 @@ struct WelcomeView: View {
                 LohabiPrimaryButton(text: "Next") {
                     onboardingManager.onboardingStep = .locationPermissionStep
                 }
+                .padding(.vertical, 8)
             }
         }
     }

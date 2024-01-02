@@ -18,6 +18,7 @@ struct FinishedView: View {
                 LohabiPrimaryButton(text: "All Done") {
                     defaultsManager.needsOnboarding = false
                 }
+                .padding(.vertical, 8)
             }
         }
     }
