@@ -22,7 +22,14 @@
       }
     },
     "All Done!" : {
-
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helemaal klaar!"
+          }
+        }
+      }
     },
     "Allow Always Location Access" : {
       "localizations" : {
@@ -59,6 +66,16 @@
     },
     "Description" : {
 
+    },
+    "Due Parental Control settings we cannot ask your location permissions. You may not access Lohabi." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vanwege de instellingen voor ouderlijk toezicht kunnen we niet je locatie toestemming vragen. Je hebt geen toegang tot Lohabi."
+          }
+        }
+      }
     },
     "Enable Later in Settings" : {
       "localizations" : {
@@ -159,6 +176,16 @@
         }
       }
     },
+    "Parental Control" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouderlijk Toezicht"
+          }
+        }
+      }
+    },
     "Primary Button" : {
 
     },
@@ -194,6 +221,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Om de toestemming 'Altijd' te geven, hebben we de toestemming 'Alleen tijdens gebruik van app' nodig."
+          }
+        }
+      }
+    },
+    "Try Again" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Probeer Opnieuw"
           }
         }
       }
