@@ -10,10 +10,6 @@ import CoreLocation
 import UIKit
 import SwiftUI
 
-//enum LocationAuthorizationStatus {
-//    case unknown, restricted, denied, notDetermined, authorizedWhenInUse, authorizedAlways
-//}
-
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 
     private let locationManager = CLLocationManager()

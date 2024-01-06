@@ -159,6 +159,12 @@
         }
       }
     },
+    "Primary Button" : {
+
+    },
+    "Secondary Button" : {
+
+    },
     "Settings" : {
       "localizations" : {
         "nl" : {

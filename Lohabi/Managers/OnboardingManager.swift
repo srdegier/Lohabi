@@ -28,7 +28,6 @@ class OnboardingManager: ObservableObject {
                 // parental restrictions
                 onboardingStep = .finishedStep
             case .denied:
-                print("denied")
                 onboardingStep = .locationPermissionBySettingsStep
             @unknown default: break
             
