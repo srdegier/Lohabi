@@ -8,6 +8,7 @@
 import Foundation
 
 class UserDefaultsManager: ObservableObject {
+    
     private let needsOnboardingKey = "needsOnboarding"
     
     @Published var needsOnboarding: Bool {
@@ -15,8 +16,18 @@ class UserDefaultsManager: ObservableObject {
             UserDefaults.standard.set(needsOnboarding, forKey: needsOnboardingKey)
         }
     }
-    
+        
     init() {
+        UserDefaults.standard.register(defaults: [needsOnboardingKey: true])
         needsOnboarding = UserDefaults.standard.bool(forKey: needsOnboardingKey)
+    }
+    
+    private func printAllKeys() {
+        let userDefaults = UserDefaults.standard
+        let allEntries = userDefaults.dictionaryRepresentation()
+        
+        for key in allEntries.keys {
+            print(key)
+        }
     }
 }
