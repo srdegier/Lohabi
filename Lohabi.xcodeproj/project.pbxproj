@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870B69A52B473101001E6A2F /* LocationPermissionAlwaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870B69A42B473101001E6A2F /* LocationPermissionAlwaysView.swift */; };
+		870B69A72B4752CF001E6A2F /* LocationPermissionBySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870B69A62B4752CF001E6A2F /* LocationPermissionBySettingsView.swift */; };
+		870B69A92B499D49001E6A2F /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 870B69A82B499D49001E6A2F /* InfoPlist.xcstrings */; };
 		870CCC4C2B3C518D0042C976 /* LohabiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870CCC4B2B3C518D0042C976 /* LohabiApp.swift */; };
 		870CCC4E2B3C518D0042C976 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870CCC4D2B3C518D0042C976 /* ContentView.swift */; };
 		870CCC502B3C518E0042C976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 870CCC4F2B3C518E0042C976 /* Assets.xcassets */; };
@@ -18,14 +21,19 @@
 		87BFB7482B41AA290069456C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7472B41AA290069456C /* WelcomeView.swift */; };
 		87BFB74A2B41AA840069456C /* FinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7492B41AA840069456C /* FinishedView.swift */; };
 		87BFB74C2B41C28E0069456C /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB74B2B41C28E0069456C /* OnboardingContentView.swift */; };
-		87BFB7502B41D21E0069456C /* LocationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB74F2B41D21E0069456C /* LocationPermissionView.swift */; };
+		87BFB7502B41D21E0069456C /* LocationPermissionWhenInUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB74F2B41D21E0069456C /* LocationPermissionWhenInUseView.swift */; };
 		87E3FB752B447F640033A085 /* LohabiPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E3FB742B447F640033A085 /* LohabiPrimaryButton.swift */; };
 		87E3FB782B448AB10033A085 /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E3FB772B448AB10033A085 /* OnboardingManager.swift */; };
 		87E3FB7A2B4492010033A085 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E3FB792B4492010033A085 /* UserDefaultsManager.swift */; };
 		87E3FB7C2B44B21A0033A085 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 87E3FB7B2B44B21A0033A085 /* Localizable.xcstrings */; };
+		87E3FB7E2B44CBCE0033A085 /* LohabiSecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E3FB7D2B44CBCE0033A085 /* LohabiSecondaryButton.swift */; };
+		87E3FB802B46E3540033A085 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E3FB7F2B46E3540033A085 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		870B69A42B473101001E6A2F /* LocationPermissionAlwaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionAlwaysView.swift; sourceTree = "<group>"; };
+		870B69A62B4752CF001E6A2F /* LocationPermissionBySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionBySettingsView.swift; sourceTree = "<group>"; };
+		870B69A82B499D49001E6A2F /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = InfoPlist.xcstrings; path = ../../../InfoPlist.xcstrings; sourceTree = "<group>"; };
 		870CCC482B3C518D0042C976 /* Lohabi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lohabi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		870CCC4B2B3C518D0042C976 /* LohabiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LohabiApp.swift; sourceTree = "<group>"; };
 		870CCC4D2B3C518D0042C976 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,11 +46,14 @@
 		87BFB7472B41AA290069456C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		87BFB7492B41AA840069456C /* FinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedView.swift; sourceTree = "<group>"; };
 		87BFB74B2B41C28E0069456C /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
-		87BFB74F2B41D21E0069456C /* LocationPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionView.swift; sourceTree = "<group>"; };
+		87BFB74F2B41D21E0069456C /* LocationPermissionWhenInUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionWhenInUseView.swift; sourceTree = "<group>"; };
 		87E3FB742B447F640033A085 /* LohabiPrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LohabiPrimaryButton.swift; sourceTree = "<group>"; };
 		87E3FB772B448AB10033A085 /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
 		87E3FB792B4492010033A085 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		87E3FB7B2B44B21A0033A085 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		87E3FB7D2B44CBCE0033A085 /* LohabiSecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LohabiSecondaryButton.swift; sourceTree = "<group>"; };
+		87E3FB7F2B46E3540033A085 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		87E3FB812B46F5830033A085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +70,7 @@
 		870CCC3F2B3C518D0042C976 = {
 			isa = PBXGroup;
 			children = (
+				870B69A82B499D49001E6A2F /* InfoPlist.xcstrings */,
 				87E3FB7B2B44B21A0033A085 /* Localizable.xcstrings */,
 				870CCC4A2B3C518D0042C976 /* Lohabi */,
 				870CCC492B3C518D0042C976 /* Products */,
@@ -76,6 +88,7 @@
 		870CCC4A2B3C518D0042C976 /* Lohabi */ = {
 			isa = PBXGroup;
 			children = (
+				87E3FB812B46F5830033A085 /* Info.plist */,
 				87E3FB762B448A980033A085 /* Managers */,
 				87BFB7402B3E2FE40069456C /* Components */,
 				87BFB7432B3E38680069456C /* Views */,
@@ -115,6 +128,7 @@
 				87BFB7412B3E2FFE0069456C /* LohabiNavigationStack.swift */,
 				87BFB74B2B41C28E0069456C /* OnboardingContentView.swift */,
 				87E3FB742B447F640033A085 /* LohabiPrimaryButton.swift */,
+				87E3FB7D2B44CBCE0033A085 /* LohabiSecondaryButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -136,7 +150,9 @@
 			children = (
 				87BFB7452B40D9030069456C /* OnboardingView.swift */,
 				87BFB7472B41AA290069456C /* WelcomeView.swift */,
-				87BFB74F2B41D21E0069456C /* LocationPermissionView.swift */,
+				87BFB74F2B41D21E0069456C /* LocationPermissionWhenInUseView.swift */,
+				870B69A42B473101001E6A2F /* LocationPermissionAlwaysView.swift */,
+				870B69A62B4752CF001E6A2F /* LocationPermissionBySettingsView.swift */,
 				87BFB7492B41AA840069456C /* FinishedView.swift */,
 			);
 			path = Onboarding;
@@ -147,6 +163,7 @@
 			children = (
 				87E3FB772B448AB10033A085 /* OnboardingManager.swift */,
 				87E3FB792B4492010033A085 /* UserDefaultsManager.swift */,
+				87E3FB7F2B46E3540033A085 /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -212,6 +229,7 @@
 			files = (
 				870CCC532B3C518E0042C976 /* Preview Assets.xcassets in Resources */,
 				870CCC502B3C518E0042C976 /* Assets.xcassets in Resources */,
+				870B69A92B499D49001E6A2F /* InfoPlist.xcstrings in Resources */,
 				87E3FB7C2B44B21A0033A085 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,18 +242,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				87BFB7422B3E2FFE0069456C /* LohabiNavigationStack.swift in Sources */,
+				870B69A72B4752CF001E6A2F /* LocationPermissionBySettingsView.swift in Sources */,
 				870CCC4E2B3C518D0042C976 /* ContentView.swift in Sources */,
+				87E3FB802B46E3540033A085 /* LocationManager.swift in Sources */,
 				87E3FB782B448AB10033A085 /* OnboardingManager.swift in Sources */,
 				87E3FB752B447F640033A085 /* LohabiPrimaryButton.swift in Sources */,
 				87BFB74C2B41C28E0069456C /* OnboardingContentView.swift in Sources */,
 				87BFB7392B3E0DE30069456C /* SettingsView.swift in Sources */,
 				87BFB7462B40D9040069456C /* OnboardingView.swift in Sources */,
 				87BFB74A2B41AA840069456C /* FinishedView.swift in Sources */,
-				87BFB7502B41D21E0069456C /* LocationPermissionView.swift in Sources */,
+				87BFB7502B41D21E0069456C /* LocationPermissionWhenInUseView.swift in Sources */,
 				870CCC4C2B3C518D0042C976 /* LohabiApp.swift in Sources */,
 				87E3FB7A2B4492010033A085 /* UserDefaultsManager.swift in Sources */,
+				870B69A52B473101001E6A2F /* LocationPermissionAlwaysView.swift in Sources */,
 				87BFB7362B3DF4310069456C /* AddLohabiView.swift in Sources */,
 				87BFB7482B41AA290069456C /* WelcomeView.swift in Sources */,
+				87E3FB7E2B44CBCE0033A085 /* LohabiSecondaryButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +394,11 @@
 				DEVELOPMENT_TEAM = VX8CYT528Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lohabi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need the permission 'Change to Always Allow' in order to verify that you are at the correct location for the measurement, even if your not using your iPhone.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need the permission 'Allow While Using App' in order to verify that you are at the correct location for the measurement in the foreground.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -402,6 +429,11 @@
 				DEVELOPMENT_TEAM = VX8CYT528Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lohabi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need the permission 'Change to Always Allow' in order to verify that you are at the correct location for the measurement, even if your not using your iPhone.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need the permission 'Allow While Using App' in order to verify that you are at the correct location for the measurement in the foreground.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

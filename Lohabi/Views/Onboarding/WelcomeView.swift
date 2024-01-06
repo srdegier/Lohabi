@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @EnvironmentObject var locationManager: LocationManager
     @EnvironmentObject var onboardingManager: OnboardingManager
 
     var body: some View {
@@ -15,8 +16,10 @@ struct WelcomeView: View {
             OnboardingContentView(imageName: "OnboardingWelcome", title: "Welcome at Lohabi", description: "Let's start by setting up some important settings so that the app functions properly."  )
             VStack {
                 LohabiPrimaryButton(text: "Next") {
-                    onboardingManager.onboardingStep = .locationPermissionStep
+                    let locationStatus = locationManager.locationStatus
+                    onboardingManager.onboardingStepByLocationStatus(locationStatus: locationStatus)
                 }
+                .padding(.vertical, 8)
             }
         }
     }
@@ -24,5 +27,6 @@ struct WelcomeView: View {
 
 #Preview {
     WelcomeView()
+        .environmentObject(LocationManager())
         .environmentObject(OnboardingManager())
 }

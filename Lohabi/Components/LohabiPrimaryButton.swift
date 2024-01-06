@@ -11,18 +11,32 @@ import SwiftUI
 struct LohabiPrimaryButton: View {
     var text: LocalizedStringKey
     var action: () -> Void
-    
+    var isLoading: Bool = false
+    var loadingText: LocalizedStringKey = "Loading..."
+
     var body: some View {
-        Button(action: action, label: {
-            Text(text)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .padding(16)
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-                .cornerRadius(16)
-        })
+        Button(action: action) {
+            HStack {
+                if isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                        .scaleEffect(1.5, anchor: .center)
+                        .padding(.horizontal, 8)
+                }
+                Text(isLoading ? loadingText : text)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+            }
+            .frame(maxWidth: .infinity)
+        }
+        .disabled(isLoading)
+        .padding(16)
+        .background(Color.blue)
+        .cornerRadius(16)
         .padding(.horizontal, 24)
-        .padding(.vertical)
     }
+}
+
+#Preview {
+    LohabiPrimaryButton(text: "Primary Button", action: {})
 }

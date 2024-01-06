@@ -26,7 +26,9 @@ struct LohabiApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.light)
                 .environmentObject(UserDefaultsManager())
+                .environmentObject(LocationManager())
 
         }
         .modelContainer(sharedModelContainer)

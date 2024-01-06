@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @EnvironmentObject var locationManager: LocationManager
     @EnvironmentObject var onboardingManager: OnboardingManager
 
     var body: some View {
         VStack {
             currentStepView()
-                // TODO: Inspect later which is better
+                .environmentObject(LocationManager())
                 .transition(.push(from: .trailing))
-//                .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
         }
         .animation(.default, value: onboardingManager.onboardingStep)
+        .onChange(of: locationManager.locationStatus) {
+            if onboardingManager.onboardingStep != .welcomeStep {
+                let locationStatus = locationManager.locationStatus
+                onboardingManager.onboardingStepByLocationStatus(locationStatus: locationStatus)
+            }
+        }
     }
     
     @ViewBuilder
@@ -25,8 +31,12 @@ struct OnboardingView: View {
         switch onboardingManager.onboardingStep {
         case .welcomeStep:
             WelcomeView()
-        case .locationPermissionStep:
-            LocationPermissionView()
+        case .locationPermissionWhenInUseStep:
+            LocationPermissionWhenInUseView()
+        case .locationPermissionAlwaysStep:
+            LocationPermissionAlwaysView()
+        case .locationPermissionBySettingsStep:
+            LocationPermissionBySettingsView()
         case .finishedStep:
             FinishedView()
         }
@@ -34,5 +44,7 @@ struct OnboardingView: View {
 }
 
 #Preview {
-    OnboardingView().environmentObject(OnboardingManager())
+    OnboardingView()
+        .environmentObject(LocationManager())
+        .environmentObject(OnboardingManager())
 }

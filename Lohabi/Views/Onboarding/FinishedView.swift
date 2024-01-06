@@ -13,11 +13,12 @@ struct FinishedView: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            OnboardingContentView(imageName: "TestImage", title: "", description: "")
+            OnboardingContentView(imageName: "OnboardingWelcome", title: "All Done!", description: "You are all set to be able to measure you location habit!")
             VStack {
                 LohabiPrimaryButton(text: "All Done") {
                     defaultsManager.needsOnboarding = false
                 }
+                .padding(.vertical, 8)
             }
         }
     }
