@@ -8,18 +8,33 @@
 import SwiftUI
 
 struct OnboardingContentView: View {
-    var imageName: String
+    var imageName: String?
+    var iconName: String?
     var title: LocalizedStringKey
     var description: LocalizedStringKey
 
     var body: some View {
         VStack(spacing: 0) {
-            Image(imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .foregroundColor(.blue)
-                .frame(width: UIScreen.main.bounds.width, height: 350)
-                .background(.gray)
+            VStack {
+                if let imageName = imageName {
+                    Image(imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .foregroundColor(.blue)
+                }
+                if let iconName = iconName {
+                    Image(systemName: iconName)
+                        .resizable()
+                        .frame(width: 150, height: 150)
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.blue)
+                }
+            }
+            .frame(width: UIScreen.main.bounds.width, height: 350)
+            .if(imageName != nil) {
+                $0.edgesIgnoringSafeArea([.top])
+            }
+
             ScrollView {
                 VStack(spacing: 24) {
                     HStack {
@@ -28,7 +43,7 @@ struct OnboardingContentView: View {
                             .multilineTextAlignment(.center)
                             .bold()
                     }
- 
+
                     Text(description)
                         .font(.body)
                         .foregroundColor(.gray)
@@ -39,10 +54,21 @@ struct OnboardingContentView: View {
                 .padding(.horizontal, 24)
             }
         }
-        .edgesIgnoringSafeArea([.top])
     }
 }
 
-#Preview {
-    OnboardingContentView(imageName: "TestImage", title: "Titel", description: "Description")
+extension View {
+    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+}
+
+struct OnboardingContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        OnboardingContentView(imageName: nil, iconName: "lock.circle", title: "Titel", description: "Description")
+    }
 }
