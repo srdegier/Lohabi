@@ -24,3 +24,7 @@ struct LohabiSecondaryButton: View {
         .padding(.horizontal, 24)
     }
 }
+
+#Preview {
+    LohabiSecondaryButton(text: "Secondary Button", action: {})
+}

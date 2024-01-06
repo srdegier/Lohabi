@@ -16,27 +16,27 @@ struct LohabiPrimaryButton: View {
 
     var body: some View {
         Button(action: action) {
-            if isLoading {
-                HStack {
+            HStack {
+                if isLoading {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: .white))
                         .scaleEffect(1.5, anchor: .center)
                         .padding(.horizontal, 8)
-                    Text(loadingText)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
                 }
-            } else {
-                Text(text)
+                Text(isLoading ? loadingText : text)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
             }
+            .frame(maxWidth: .infinity)
         }
         .disabled(isLoading)
         .padding(16)
-        .frame(maxWidth: .infinity)
         .background(Color.blue)
         .cornerRadius(16)
         .padding(.horizontal, 24)
     }
+}
+
+#Preview {
+    LohabiPrimaryButton(text: "Primary Button", action: {})
 }
