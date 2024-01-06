@@ -28,6 +28,7 @@ struct LohabiApp: App {
             ContentView()
                 .preferredColorScheme(.light)
                 .environmentObject(UserDefaultsManager())
+                .environmentObject(LocationManager())
 
         }
         .modelContainer(sharedModelContainer)

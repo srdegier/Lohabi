@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var defaultsManager: UserDefaultsManager
-    var onboardingManager = OnboardingManager()
     @State private var showAddLohabiSheet = false
     
     var body: some View {
@@ -28,7 +27,8 @@ struct ContentView: View {
         }
         .fullScreenCover(isPresented: $defaultsManager.needsOnboarding, content: {
             OnboardingView()
-                .environmentObject(onboardingManager)
+                .environmentObject(OnboardingManager())
+                .environmentObject(LocationManager())
         })
     }
     
@@ -97,11 +97,13 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(LocationManager())
         .environmentObject(UserDefaultsManager())
 }
 
 #Preview("Dutch") {
     ContentView()
+        .environmentObject(LocationManager())
         .environmentObject(UserDefaultsManager())
         .environment(\.locale, Locale(identifier: "NL"))
 }

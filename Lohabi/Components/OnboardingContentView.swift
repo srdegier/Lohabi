@@ -22,10 +22,13 @@ struct OnboardingContentView: View {
                 .background(.gray)
             ScrollView {
                 VStack(spacing: 24) {
-                    Text(title)
-                        .font(.title)
-                        .multilineTextAlignment(.center)
-                        .bold()
+                    HStack {
+                        Text(title)
+                            .font(.title)
+                            .multilineTextAlignment(.center)
+                            .bold()
+                    }
+ 
                     Text(description)
                         .font(.body)
                         .foregroundColor(.gray)

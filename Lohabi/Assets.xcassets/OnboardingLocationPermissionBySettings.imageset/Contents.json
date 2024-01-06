@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "OnboardingLocationPermission.png",
+      "filename" : "OnboardingLocationPermissionBySettings.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -14,7 +14,7 @@
       "scale" : "3x"
     },
     {
-      "filename" : "OnboardingLocationPermissionNL.png",
+      "filename" : "OnboardingLocationPermissionBySettingsNL.png",
       "idiom" : "universal",
       "locale" : "nl",
       "scale" : "1x"

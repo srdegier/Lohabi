@@ -7,11 +7,31 @@
 
 import Foundation
 import SwiftUI
+import CoreLocation
 
 public enum OnboardingStep: Comparable, Codable {
-    case welcomeStep, locationPermissionStep, finishedStep
+    case welcomeStep, locationPermissionWhenInUseStep, locationPermissionAlwaysStep, locationPermissionBySettingsStep, finishedStep
 }
 
 class OnboardingManager: ObservableObject {
     @Published var onboardingStep: OnboardingStep = .welcomeStep
+    
+    func onboardingStepByLocationStatus(locationStatus: CLAuthorizationStatus) {
+        switch locationStatus {
+            case .notDetermined:
+                onboardingStep = .locationPermissionWhenInUseStep
+            case .authorizedWhenInUse:
+                onboardingStep = .locationPermissionAlwaysStep
+            case .authorizedAlways:
+                onboardingStep = .finishedStep
+            case .restricted:
+                // parental restrictions
+                onboardingStep = .finishedStep
+            case .denied:
+                print("denied")
+                onboardingStep = .locationPermissionBySettingsStep
+            @unknown default: break
+            
+        }
+    }
 }
