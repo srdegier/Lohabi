@@ -1,0 +1,290 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Add Lohabi" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lohabi toevoegen"
+          }
+        }
+      }
+    },
+    "All Done" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helemaal Klaar"
+          }
+        }
+      }
+    },
+    "All Done!" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helemaal klaar!"
+          }
+        }
+      }
+    },
+    "Allow Always Location Access" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altijd Toegang tot Locatie Toestaan"
+          }
+        }
+      }
+    },
+    "Allow While Using App" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bij gebruik van app"
+          }
+        }
+      }
+    },
+    "Checking Permissions..." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toestemming Checken"
+          }
+        }
+      }
+    },
+    "Custom Navigation" : {
+
+    },
+    "Description" : {
+
+    },
+    "Due Parental Control settings we cannot ask your location permissions. You may not access Lohabi." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vanwege de instellingen voor ouderlijk toezicht kunnen we niet je locatie toestemming vragen. Je hebt geen toegang tot Lohabi."
+          }
+        }
+      }
+    },
+    "Enable Later in Settings" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schakel later aan in Instellingen"
+          }
+        }
+      }
+    },
+    "It seem like you have not added a 'Lohabi'. Add one by tapping the button below yet" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het ziet er naar uit dat je nog geen \"Lohabi\" hebt aangemaakt. Voeg er één toe door te drukken op het plusje onderaan."
+          }
+        }
+      }
+    },
+    "Let's start by setting up some important settings so that the app functions properly." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laten we beginnen met het instellen van enkele belangrijke instellingen, zodat de app goed functioneert."
+          }
+        }
+      }
+    },
+    "Loading..." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laden..."
+          }
+        }
+      }
+    },
+    "Location Permission" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Locatie Toestemming"
+          }
+        }
+      }
+    },
+    "Location Permission in the Background" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Locatie toestemming in de achtergrond"
+          }
+        }
+      }
+    },
+    "Lohabi" : {
+
+    },
+    "Next" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volgende"
+          }
+        }
+      }
+    },
+    "No Full Location Access" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen Toegang tot Volledige Locatie"
+          }
+        }
+      }
+    },
+    "Okay" : {
+
+    },
+    "Onboarding Reset" : {
+
+    },
+    "Open App Settings" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App instellingen openen"
+          }
+        }
+      }
+    },
+    "Parental Control" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouderlijk Toezicht"
+          }
+        }
+      }
+    },
+    "Primary Button" : {
+
+    },
+    "Secondary Button" : {
+
+    },
+    "Settings" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instellingen"
+          }
+        }
+      }
+    },
+    "Titel" : {
+
+    },
+    "To be able to use Lohabi properly we need full location access. Please select the 'Always' option in Lohabi app settings." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om Lohabi goed te kunnen gebruiken, hebben we volledige locatietoegang nodig. Selecteer de optie 'Altijd' in de instellingen van de Lohabi app."
+          }
+        }
+      }
+    },
+    "To give the 'Always' permission, we need the 'Only While Using App' permission." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om de toestemming 'Altijd' te geven, hebben we de toestemming 'Alleen tijdens gebruik van app' nodig."
+          }
+        }
+      }
+    },
+    "Try Again" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Probeer Opnieuw"
+          }
+        }
+      }
+    },
+    "We need the permission 'Allow While Using App' in order to verify that you are at the correct location for the measurement in the foreground." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We hebben de toestemming 'Bij gebruik van app' nodig om te controleren of je op de juiste locatie bent voor een meting op de voorgrond."
+          }
+        }
+      }
+    },
+    "We need the permission 'Change to Always Allow' in order to verify that you are at the correct location for the measurement, even if your not using your iPhone." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We hebben de toestemming 'Wijzig in Altijd' nodig om te controleren of je op de juiste locatie bent voor de meting, zelfs als je je iPhone niet gebruikt."
+          }
+        }
+      }
+    },
+    "Welcome at Lohabi" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welkom bij Lohabi"
+          }
+        }
+      }
+    },
+    "Wrong Permission" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verkeerde toestemming"
+          }
+        }
+      }
+    },
+    "You are all set to be able to measure you location habit!" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je bent helemaal klaar om je locatiegewoonte te meten!"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
