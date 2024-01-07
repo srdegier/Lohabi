@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FinishedView: View {
-    @EnvironmentObject var defaultsManager: UserDefaultsManager
+    @Environment(UserDefaultsManager.self) var userDefaultsManager
     @Environment(OnboardingManager.self) var onboardingManager
     
     var body: some View {
@@ -16,7 +16,7 @@ struct FinishedView: View {
             OnboardingContentView(imageName: "OnboardingWelcome", title: "All Done!", description: "You are all set to be able to measure you location habit!")
             VStack {
                 LohabiPrimaryButton(text: "All Done") {
-                    defaultsManager.needsOnboarding = false
+                    userDefaultsManager.needsOnboarding = false
                 }
                 .padding(.vertical, 8)
             }
@@ -27,5 +27,5 @@ struct FinishedView: View {
 #Preview {
     FinishedView()
         .environment(OnboardingManager())
-        .environmentObject(UserDefaultsManager())
+        .environment(UserDefaultsManager())
 }

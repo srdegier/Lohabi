@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(UserDefaultsManager.self) var userDefaultsManager
+    
     @State private var onboardingManager = OnboardingManager()
-    @EnvironmentObject var defaultsManager: UserDefaultsManager
     @State private var showAddLohabiSheet = false
     
     var body: some View {
+        @Bindable var userDefaultsManager = userDefaultsManager
+        
         LohabiNavigationStack {
             ZStack(alignment: .bottom) {
                 //lohabiScrollView
@@ -26,7 +29,7 @@ struct ContentView: View {
         .sheet(isPresented: $showAddLohabiSheet) {
             AddLohabiView()
         }
-        .fullScreenCover(isPresented: $defaultsManager.needsOnboarding, content: {
+        .fullScreenCover(isPresented: $userDefaultsManager.needsOnboarding, content: {
             OnboardingView()
                 .environment(onboardingManager)
         })
@@ -97,11 +100,11 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(UserDefaultsManager())
+        .environment(UserDefaultsManager())
 }
 
 #Preview("Dutch") {
     ContentView()
-        .environmentObject(UserDefaultsManager())
+        .environment(UserDefaultsManager())
         .environment(\.locale, Locale(identifier: "NL"))
 }

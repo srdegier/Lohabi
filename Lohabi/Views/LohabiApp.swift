@@ -23,15 +23,15 @@ struct LohabiApp: App {
         }
     }()
     
+    @State private var userDefaultsManager = UserDefaultsManager()
     @State private var locationManager = LocationManager()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .preferredColorScheme(.light)
-                .environmentObject(UserDefaultsManager())
-                .environment(LocationManager())
-
+                .environment(userDefaultsManager)
+                .environment(locationManager)
         }
         .modelContainer(sharedModelContainer)
     }
