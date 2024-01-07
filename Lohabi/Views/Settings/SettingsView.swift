@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @EnvironmentObject var defaultsManager: UserDefaultsManager
+    @Environment(UserDefaultsManager.self) var userDefaultsManager: UserDefaultsManager
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         LohabiNavigationStack {
             LohabiPrimaryButton(text: "Onboarding Reset") {
-                defaultsManager.needsOnboarding = true
+                userDefaultsManager.needsOnboarding = true
                 dismiss()
             }
             .navigationTitle("Settings")
@@ -24,5 +24,5 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
-        .environmentObject(UserDefaultsManager())
+        .environment(UserDefaultsManager())
 }
