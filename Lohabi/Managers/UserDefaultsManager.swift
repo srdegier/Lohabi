@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import Observation
 
-class UserDefaultsManager: ObservableObject {
+@Observable
+class UserDefaultsManager {
     
     private let needsOnboardingKey = "needsOnboarding"
     
-    @Published var needsOnboarding: Bool {
+    var needsOnboarding: Bool {
         didSet {
             UserDefaults.standard.set(needsOnboarding, forKey: needsOnboardingKey)
         }
