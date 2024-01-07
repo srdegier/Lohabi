@@ -7,14 +7,16 @@
 
 import Foundation
 import SwiftUI
+import Observation
 import CoreLocation
 
 public enum OnboardingStep: Comparable, Codable {
     case welcomeStep, locationPermissionWhenInUseStep, locationPermissionAlwaysStep, locationPermissionBySettingsStep, finishedStep
 }
 
-class OnboardingManager: ObservableObject {
-    @Published var onboardingStep: OnboardingStep = .welcomeStep
+@Observable
+class OnboardingManager {
+    var onboardingStep: OnboardingStep = .welcomeStep
     
     func onboardingStepByLocationStatus(locationStatus: CLAuthorizationStatus) {
         switch locationStatus {

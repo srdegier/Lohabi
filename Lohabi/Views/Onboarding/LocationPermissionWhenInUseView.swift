@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LocationPermissionWhenInUseView: View {
     @EnvironmentObject var locationManager: LocationManager
-    @EnvironmentObject var onboardingManager: OnboardingManager
+    @Environment(OnboardingManager.self) var onboardingManager
 
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -31,5 +31,5 @@ struct LocationPermissionWhenInUseView: View {
 #Preview {
     LocationPermissionWhenInUseView()
         .environmentObject(LocationManager())
-        .environmentObject(OnboardingManager())
+        .environment(OnboardingManager())
 }

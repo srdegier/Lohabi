@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var onboardingManager = OnboardingManager()
     @EnvironmentObject var defaultsManager: UserDefaultsManager
     @State private var showAddLohabiSheet = false
     
@@ -27,7 +28,7 @@ struct ContentView: View {
         }
         .fullScreenCover(isPresented: $defaultsManager.needsOnboarding, content: {
             OnboardingView()
-                .environmentObject(OnboardingManager())
+                .environment(onboardingManager)
                 .environmentObject(LocationManager())
         })
     }

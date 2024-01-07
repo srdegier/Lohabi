@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     @EnvironmentObject var locationManager: LocationManager
-    @EnvironmentObject var onboardingManager: OnboardingManager
+    @Environment(OnboardingManager.self) var onboardingManager
 
     var body: some View {
         VStack {
@@ -46,5 +46,5 @@ struct OnboardingView: View {
 #Preview {
     OnboardingView()
         .environmentObject(LocationManager())
-        .environmentObject(OnboardingManager())
+        .environment(OnboardingManager())
 }

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct FinishedView: View {
     @EnvironmentObject var defaultsManager: UserDefaultsManager
-    @EnvironmentObject var onboardingManager: OnboardingManager
-
+    @Environment(OnboardingManager.self) var onboardingManager
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             OnboardingContentView(imageName: "OnboardingWelcome", title: "All Done!", description: "You are all set to be able to measure you location habit!")
@@ -26,6 +26,6 @@ struct FinishedView: View {
 
 #Preview {
     FinishedView()
-        .environmentObject(OnboardingManager())
+        .environment(OnboardingManager())
         .environmentObject(UserDefaultsManager())
 }
