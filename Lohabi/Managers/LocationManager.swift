@@ -10,11 +10,12 @@ import CoreLocation
 import UIKit
 import SwiftUI
 
-class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+@Observable
+class LocationManager: NSObject, CLLocationManagerDelegate {
 
     private let locationManager = CLLocationManager()
     
-    @Published var locationStatus: CLAuthorizationStatus = .notDetermined
+    var locationStatus: CLAuthorizationStatus = .notDetermined
     
     override init() {
         super.init()
@@ -62,4 +63,3 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
 }
-

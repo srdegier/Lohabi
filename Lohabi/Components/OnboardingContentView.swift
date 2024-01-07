@@ -21,6 +21,7 @@ struct OnboardingContentView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .foregroundColor(.blue)
+                        .background(.red)
                 }
                 if let iconName = iconName {
                     Image(systemName: iconName)
@@ -28,13 +29,10 @@ struct OnboardingContentView: View {
                         .frame(width: 150, height: 150)
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.blue)
+                        .background(.red)
                 }
             }
             .frame(width: UIScreen.main.bounds.width, height: 350)
-            .if(imageName != nil) {
-                $0.edgesIgnoringSafeArea([.top])
-            }
-
             ScrollView {
                 VStack(spacing: 24) {
                     HStack {
@@ -54,6 +52,9 @@ struct OnboardingContentView: View {
                 .padding(.horizontal, 24)
             }
         }
+        .if(imageName != nil) {
+            $0.edgesIgnoringSafeArea([.top])
+        }
     }
 }
 
@@ -69,6 +70,6 @@ extension View {
 
 struct OnboardingContentView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingContentView(imageName: nil, iconName: "lock.circle", title: "Titel", description: "Description")
+        OnboardingContentView(imageName: "TestImage", iconName: nil, title: "Titel", description: "Description")
     }
 }
