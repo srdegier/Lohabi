@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct LocationPermissionBySettingsView: View {
-    @EnvironmentObject var locationManager: LocationManager
-    @EnvironmentObject var onboardingManager: OnboardingManager
-    @EnvironmentObject var defaultsManager: UserDefaultsManager
+    @Environment(LocationManager.self) var locationManager
+    @Environment(UserDefaultsManager.self) var userDefaultsManager
 
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -25,7 +24,7 @@ struct LocationPermissionBySettingsView: View {
                 }
                 .padding(.vertical, 8)
                 LohabiSecondaryButton(text: "Enable Later in Settings") {
-                    defaultsManager.needsOnboarding = false
+                    userDefaultsManager.needsOnboarding = false
                 }
                 .padding(.vertical, 8)
             }
@@ -35,6 +34,6 @@ struct LocationPermissionBySettingsView: View {
 
 #Preview {
     LocationPermissionBySettingsView()
-        .environmentObject(LocationManager())
-        .environmentObject(OnboardingManager())
+        .environment(LocationManager())
+        .environment(UserDefaultsManager())
 }

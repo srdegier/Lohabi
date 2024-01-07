@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    @EnvironmentObject var locationManager: LocationManager
-    @EnvironmentObject var onboardingManager: OnboardingManager
+    @Environment(LocationManager.self) var locationManager
+    @Environment(OnboardingManager.self) var onboardingManager
 
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -27,6 +27,6 @@ struct WelcomeView: View {
 
 #Preview {
     WelcomeView()
-        .environmentObject(LocationManager())
-        .environmentObject(OnboardingManager())
+        .environment(LocationManager())
+        .environment(OnboardingManager())
 }

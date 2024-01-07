@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct FinishedView: View {
-    @EnvironmentObject var defaultsManager: UserDefaultsManager
-    @EnvironmentObject var onboardingManager: OnboardingManager
-
+    @Environment(UserDefaultsManager.self) var userDefaultsManager
+    @Environment(OnboardingManager.self) var onboardingManager
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             OnboardingContentView(imageName: "OnboardingWelcome", title: "All Done!", description: "You are all set to be able to measure you location habit!")
             VStack {
                 LohabiPrimaryButton(text: "All Done") {
-                    defaultsManager.needsOnboarding = false
+                    userDefaultsManager.needsOnboarding = false
                 }
                 .padding(.vertical, 8)
             }
@@ -26,6 +26,6 @@ struct FinishedView: View {
 
 #Preview {
     FinishedView()
-        .environmentObject(OnboardingManager())
-        .environmentObject(UserDefaultsManager())
+        .environment(OnboardingManager())
+        .environment(UserDefaultsManager())
 }
