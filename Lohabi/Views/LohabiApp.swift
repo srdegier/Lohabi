@@ -22,13 +22,15 @@ struct LohabiApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+    
+    @State private var locationManager = LocationManager()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .preferredColorScheme(.light)
                 .environmentObject(UserDefaultsManager())
-                .environmentObject(LocationManager())
+                .environment(LocationManager())
 
         }
         .modelContainer(sharedModelContainer)

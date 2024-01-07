@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LocationPermissionAlwaysView: View {
-    @EnvironmentObject var locationManager: LocationManager
+    @Environment(LocationManager.self) var locationManager
     @Environment(OnboardingManager.self) var onboardingManager
     
     @State private var isLoading = false
@@ -49,6 +49,6 @@ struct LocationPermissionAlwaysView: View {
 
 #Preview {
     LocationPermissionAlwaysView()
-        .environmentObject(LocationManager())
+        .environment(LocationManager())
         .environment(OnboardingManager())
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LocationPermissionBySettingsView: View {
-    @EnvironmentObject var locationManager: LocationManager
+    @Environment(LocationManager.self) var locationManager
     @Environment(OnboardingManager.self) var onboardingManager
     @EnvironmentObject var defaultsManager: UserDefaultsManager
 
@@ -35,6 +35,6 @@ struct LocationPermissionBySettingsView: View {
 
 #Preview {
     LocationPermissionBySettingsView()
-        .environmentObject(LocationManager())
+        .environment(LocationManager())
         .environment(OnboardingManager())
 }

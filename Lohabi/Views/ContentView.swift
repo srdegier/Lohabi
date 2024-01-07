@@ -29,7 +29,6 @@ struct ContentView: View {
         .fullScreenCover(isPresented: $defaultsManager.needsOnboarding, content: {
             OnboardingView()
                 .environment(onboardingManager)
-                .environmentObject(LocationManager())
         })
     }
     
@@ -98,13 +97,11 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(LocationManager())
         .environmentObject(UserDefaultsManager())
 }
 
 #Preview("Dutch") {
     ContentView()
-        .environmentObject(LocationManager())
         .environmentObject(UserDefaultsManager())
         .environment(\.locale, Locale(identifier: "NL"))
 }

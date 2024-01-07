@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @EnvironmentObject var locationManager: LocationManager
+    @Environment(LocationManager.self) var locationManager
     @Environment(OnboardingManager.self) var onboardingManager
 
     var body: some View {
         VStack {
             currentStepView()
-                .environmentObject(LocationManager())
                 .transition(.push(from: .trailing))
         }
         .animation(.default, value: onboardingManager.onboardingStep)
@@ -45,6 +44,6 @@ struct OnboardingView: View {
 
 #Preview {
     OnboardingView()
-        .environmentObject(LocationManager())
+        .environment(LocationManager())
         .environment(OnboardingManager())
 }

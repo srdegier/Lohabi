@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    @EnvironmentObject var locationManager: LocationManager
+    @Environment(LocationManager.self) var locationManager
     @Environment(OnboardingManager.self) var onboardingManager
 
     var body: some View {
@@ -27,6 +27,6 @@ struct WelcomeView: View {
 
 #Preview {
     WelcomeView()
-        .environmentObject(LocationManager())
+        .environment(LocationManager())
         .environment(OnboardingManager())
 }
