@@ -21,7 +21,6 @@ struct OnboardingContentView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .foregroundColor(.blue)
-                        .background(.red)
                 }
                 if let iconName = iconName {
                     Image(systemName: iconName)
@@ -29,7 +28,6 @@ struct OnboardingContentView: View {
                         .frame(width: 150, height: 150)
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.blue)
-                        .background(.red)
                 }
             }
             .frame(width: UIScreen.main.bounds.width, height: 350)
