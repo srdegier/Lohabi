@@ -101,6 +101,7 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environment(UserDefaultsManager())
+        .environment(LocationManager())
 }
 
 #Preview("Dutch") {
