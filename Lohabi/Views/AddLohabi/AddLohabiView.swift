@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddLohabiView: View {
     @Environment(LocationManager.self) var locationManager
+    @Environment(\.dismiss) var dismiss
     @State private var searchText = ""
     @State private var selectedLocation: LocationInfo?
     @State private var locations: [LocationInfo] = []
@@ -17,7 +18,7 @@ struct AddLohabiView: View {
         LohabiNavigationStack {
             ScrollView {
                 VStack {
-                    ForEach(locationManager.nearestLocations) { location in
+                    ForEach(locations) { location in
                         LocationRow(location: location, isSelected: selectedLocation?.id == location.id) {
                             self.selectedLocation = location
                         }
@@ -30,11 +31,22 @@ struct AddLohabiView: View {
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $searchText)
             .onChange(of: searchText) {
-                self.locationManager.updateSearchResults(searchText: searchText)
+                Task {
+                    await searchLocationsByText()
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        dismiss()
+                    }) {
+                        Image(systemName: "xmark.circle.fill")
+                    }
+                }
             }
         }
         .overlay {
-            if locationManager.nearestLocations.isEmpty {
+            if locations.isEmpty {
                 ContentUnavailableView {
                     Label(LocalizedStringKey("Search an address"), systemImage: "location.magnifyingglass")
                 } description: {
@@ -42,6 +54,15 @@ struct AddLohabiView: View {
                 }
             }
         }
+    }
+    
+    func searchLocationsByText() async {
+        guard let locations = await locationManager.updateSearchResults(searchText: searchText) else {
+            print("No locations found or an error occurred.")
+            return
+        }
+
+        self.locations = locations
     }
 }
 
