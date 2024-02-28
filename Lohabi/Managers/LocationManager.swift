@@ -26,27 +26,22 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         updateLocationStatus(locationManager.authorizationStatus)
     }
 
-    func updateSearchResults(searchText: String) {
+    func updateSearchResults(searchText: String) async -> [LocationInfo]? {
         guard !searchText.isEmpty else {
-            self.nearestLocations = []
-            return
+            return []
         }
 
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = searchText
 
-        if let location = lastKnownLocation {
-            print("Ga ik hier in?")
-            let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
-            request.region = region
-        }
+//        if let location = lastKnownLocation {
+//            let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
+//            request.region = region
+//        }
         
         let search = MKLocalSearch(request: request)
-        search.start { response, error in
-            guard let response = response else {
-                print("Er is een fout opgetreden: \(error?.localizedDescription ?? "Onbekende fout")")
-                return
-            }
+        do {
+            let response = try await search.start()
             
             let places = response.mapItems.map { item in
                 LocationInfo(
@@ -56,11 +51,13 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
                 )
             }
             
-            DispatchQueue.main.async {
-                self.nearestLocations = places
-            }
+            return places
+        } catch {
+            print("Er is een fout opgetreden: \(error.localizedDescription)")
+            return nil
         }
     }
+
 
     public func requestWhenInUseAuthorization() {
         locationManager.requestWhenInUseAuthorization()
