@@ -61,6 +61,16 @@
         }
       }
     },
+    "Cancel" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuleer"
+          }
+        }
+      }
+    },
     "Checking Permissions..." : {
       "localizations" : {
         "nl" : {
@@ -232,6 +242,16 @@
         }
       }
     },
+    "There has been an error locating the location" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er is een fout opgetreden bij het lokaliseren van de locatie"
+          }
+        }
+      }
+    },
     "Titel" : {
 
     },
@@ -264,6 +284,9 @@
           }
         }
       }
+    },
+    "Unknown Location" : {
+
     },
     "We need the permission 'Allow While Using App' in order to verify that you are at the correct location for the measurement in the foreground." : {
       "localizations" : {
