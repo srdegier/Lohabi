@@ -27,7 +27,7 @@ struct ContentView: View {
             .ignoresSafeArea(edges: [.bottom])
         }
         .sheet(isPresented: $showAddLohabiSheet) {
-            AddLohabiView()
+            AddLohabiLocationView()
         }
         .fullScreenCover(isPresented: $userDefaultsManager.needsOnboarding, content: {
             OnboardingView()
