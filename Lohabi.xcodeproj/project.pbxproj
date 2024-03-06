@@ -19,6 +19,8 @@
 		87945B112B8BA80A008E8AD9 /* LobabiLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87945B102B8BA80A008E8AD9 /* LobabiLocation.swift */; };
 		87945B132B8BE43B008E8AD9 /* LocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87945B122B8BE43B008E8AD9 /* LocationRow.swift */; };
 		87945B152B9239C0008E8AD9 /* LohabiLocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87945B142B9239C0008E8AD9 /* LohabiLocationMapView.swift */; };
+		87945B192B93A72D008E8AD9 /* AddLohabiSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87945B182B93A72D008E8AD9 /* AddLohabiSummaryView.swift */; };
+		87945B1B2B94CFDC008E8AD9 /* LohabiSectionTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87945B1A2B94CFDC008E8AD9 /* LohabiSectionTile.swift */; };
 		87BFB7362B3DF4310069456C /* AddLohabiLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7352B3DF4310069456C /* AddLohabiLocationView.swift */; };
 		87BFB7392B3E0DE30069456C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7382B3E0DE30069456C /* SettingsView.swift */; };
 		87BFB7422B3E2FFE0069456C /* LohabiNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFB7412B3E2FFE0069456C /* LohabiNavigationStack.swift */; };
@@ -49,6 +51,8 @@
 		87945B102B8BA80A008E8AD9 /* LobabiLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobabiLocation.swift; sourceTree = "<group>"; };
 		87945B122B8BE43B008E8AD9 /* LocationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRow.swift; sourceTree = "<group>"; };
 		87945B142B9239C0008E8AD9 /* LohabiLocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LohabiLocationMapView.swift; sourceTree = "<group>"; };
+		87945B182B93A72D008E8AD9 /* AddLohabiSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLohabiSummaryView.swift; sourceTree = "<group>"; };
+		87945B1A2B94CFDC008E8AD9 /* LohabiSectionTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LohabiSectionTile.swift; sourceTree = "<group>"; };
 		87BFB7352B3DF4310069456C /* AddLohabiLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLohabiLocationView.swift; sourceTree = "<group>"; };
 		87BFB7382B3E0DE30069456C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		87BFB7412B3E2FFE0069456C /* LohabiNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LohabiNavigationStack.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				87BFB7352B3DF4310069456C /* AddLohabiLocationView.swift */,
+				87945B182B93A72D008E8AD9 /* AddLohabiSummaryView.swift */,
 				87945B122B8BE43B008E8AD9 /* LocationRow.swift */,
 			);
 			path = AddLohabi;
@@ -151,6 +156,7 @@
 				87E3FB742B447F640033A085 /* LohabiPrimaryButton.swift */,
 				87E3FB7D2B44CBCE0033A085 /* LohabiSecondaryButton.swift */,
 				87945B142B9239C0008E8AD9 /* LohabiLocationMapView.swift */,
+				87945B1A2B94CFDC008E8AD9 /* LohabiSectionTile.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87BFB7422B3E2FFE0069456C /* LohabiNavigationStack.swift in Sources */,
+				87945B192B93A72D008E8AD9 /* AddLohabiSummaryView.swift in Sources */,
 				870B69A72B4752CF001E6A2F /* LocationPermissionBySettingsView.swift in Sources */,
 				870CCC4E2B3C518D0042C976 /* ContentView.swift in Sources */,
 				87E3FB802B46E3540033A085 /* LocationManager.swift in Sources */,
@@ -277,6 +284,7 @@
 				870B69AE2B4B5563001E6A2F /* LocationInfo.swift in Sources */,
 				87945B132B8BE43B008E8AD9 /* LocationRow.swift in Sources */,
 				87BFB7502B41D21E0069456C /* LocationPermissionWhenInUseView.swift in Sources */,
+				87945B1B2B94CFDC008E8AD9 /* LohabiSectionTile.swift in Sources */,
 				87945B152B9239C0008E8AD9 /* LohabiLocationMapView.swift in Sources */,
 				870CCC4C2B3C518D0042C976 /* LohabiApp.swift in Sources */,
 				87945B112B8BA80A008E8AD9 /* LobabiLocation.swift in Sources */,

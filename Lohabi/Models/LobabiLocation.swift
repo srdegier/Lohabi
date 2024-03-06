@@ -10,6 +10,6 @@ import CoreLocation
 
 struct LohabiLocation {
     let name: String
-    let locationInfo: [LocationInfo]
+    let locationInfo: LocationInfo
     // further setup configs
 }

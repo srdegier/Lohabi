@@ -13,9 +13,11 @@ struct AddLohabiLocationView: View {
     @Environment(\.dismiss) var dismiss
     @State private var searchText = ""
     @State private var selectedLocation: LocationInfo?
+    @State private var selectedLocationId: UUID?
     @State private var locations: [LocationInfo] = []
     
     @State private var showingLohabiLocationSheet = false
+    @State private var navigateToAddLohabiSummaryView = false
 
     
     var body: some View {
@@ -23,7 +25,8 @@ struct AddLohabiLocationView: View {
             ScrollView {
                 VStack {
                     ForEach(locations) { location in
-                        LocationRow(location: location, isSelected: selectedLocation?.id == location.id) {
+                        LocationRow(location: location, isSelected: selectedLocationId == location.id) {
+                            self.selectedLocationId = location.id
                             self.selectedLocation = location
                             self.showingLohabiLocationSheet = true
                         }
@@ -32,13 +35,16 @@ struct AddLohabiLocationView: View {
                 .padding(.vertical, 24)
             }
             .padding()
-            .navigationTitle("Add Lohabi")
+            .navigationTitle(navigateToAddLohabiSummaryView ? LocalizedStringKey("Back") : LocalizedStringKey("Add Lohabi"))
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $searchText)
             .onChange(of: searchText) {
                 Task {
                     await searchLocationsByText()
                 }
+            }
+            .navigationDestination(isPresented: $navigateToAddLohabiSummaryView) {
+                AddLohabiSummaryView(selectedLocation: selectedLocation)
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -60,7 +66,7 @@ struct AddLohabiLocationView: View {
                 }
             }
         }
-        .sheet(isPresented: $showingLohabiLocationSheet, onDismiss: clearSelectedLocation) {
+        .sheet(isPresented: $showingLohabiLocationSheet, onDismiss: clearSelectedLocationId) {
             Spacer()
             VStack {
                 HStack {
@@ -78,27 +84,29 @@ struct AddLohabiLocationView: View {
                     }
                 }
                 .padding()
-                LohabiLocationMapView(coordinates: selectedLocation?.coordinates)
+                LohabiLocationMapView(coordinates: selectedLocation?.coordinates, setMapMarker: true )
                     .padding(.horizontal, 24)
                 Spacer()
-                LohabiPrimaryButton(text: "Next", action: {
+                LohabiPrimaryButton(text: "Confirm", action: {
+                    self.showingLohabiLocationSheet = false
+                    self.navigateToAddLohabiSummaryView = true
                 })
             }
             .presentationDragIndicator(.visible)
-            .presentationDetents([.height(390), .medium, .large])
+            .presentationDetents([.height(390), .medium, .medium])
         }
+
     }
     
-    private func clearSelectedLocation() {
-        selectedLocation = nil
+    private func clearSelectedLocationId() {
+        self.selectedLocationId = nil
     }
     
-    func searchLocationsByText() async {
+    private func searchLocationsByText() async {
         guard let locations = await locationManager.updateSearchResults(searchText: searchText) else {
             print("No locations found or an error occurred.")
             return
         }
-
         self.locations = locations
     }
 }

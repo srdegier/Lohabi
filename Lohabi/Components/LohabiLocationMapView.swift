@@ -10,13 +10,21 @@ import MapKit
 
 struct LohabiLocationMapView: View {
     var coordinates: CLLocationCoordinate2D?
+    var setMapMarker: Bool = false
+    var setMapCircle: Bool = false
+    var mapCircleRadius: CLLocationDistance = 75
+    // var mapCircleType:
     
     var body: some View {
         if let coordinates = self.coordinates {
             Map {
-                MapCircle(center: coordinates, radius: CLLocationDistance(75))
-                    .foregroundStyle(.blue.opacity(0.60))
-                    .mapOverlayLevel(level: .aboveLabels)
+                if setMapMarker {
+                    Marker("", coordinate: coordinates)
+                }
+                if setMapCircle {
+                    MapCircle(center: coordinates, radius: CLLocationDistance(mapCircleRadius))
+                        .foregroundStyle(.blue.opacity(0.60))
+                }
             }
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .edgesIgnoringSafeArea(.all)

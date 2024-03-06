@@ -1,12 +1,40 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
+    "%.0f meter" : {
+
+    },
+    "%.0f meters" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "meter"
+          }
+        }
+      }
+    },
     "%@, %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@, %2$@"
+          }
+        }
+      }
+    },
+    "%lf meters" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "meter"
           }
         }
       }
@@ -61,6 +89,16 @@
         }
       }
     },
+    "Back" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terug"
+          }
+        }
+      }
+    },
     "Cancel" : {
       "localizations" : {
         "nl" : {
@@ -81,11 +119,25 @@
         }
       }
     },
-    "Custom Navigation" : {
-
+    "Confirm" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bevestig"
+          }
+        }
+      }
     },
     "Description" : {
-
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omschrijving"
+          }
+        }
+      }
     },
     "Due Parental Control settings we cannot ask your location permissions. You may not access Lohabi." : {
       "localizations" : {
@@ -113,6 +165,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vul het adres in waar u de meting wilt laten plaats vinden."
+          }
+        }
+      }
+    },
+    "Enter your name" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vul naam in"
+          }
+        }
+      }
+    },
+    "Entered" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BInnen"
           }
         }
       }
@@ -170,6 +242,29 @@
     "Lohabi" : {
 
     },
+    "Measurement started" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meting gestart"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naam"
+          }
+        }
+      }
+    },
+    "Name must be 15 characters or less." : {
+
+    },
     "Next" : {
       "localizations" : {
         "nl" : {
@@ -186,6 +281,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geen Toegang tot Volledige Locatie"
+          }
+        }
+      }
+    },
+    "Notifications" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meldingen"
           }
         }
       }
@@ -219,6 +324,9 @@
     "Primary Button" : {
 
     },
+    "Save" : {
+
+    },
     "Search an address" : {
       "localizations" : {
         "nl" : {
@@ -242,12 +350,32 @@
         }
       }
     },
+    "Summary" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Samenvatting"
+          }
+        }
+      }
+    },
     "There has been an error locating the location" : {
       "localizations" : {
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Er is een fout opgetreden bij het lokaliseren van de locatie"
+          }
+        }
+      }
+    },
+    "This is the radius of the zone you must enter for the measurement to begin. You can adjust the desired radius using the slider." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit is de radius van de zone die u moet betreden zodat de meting kan starten. Via de slider kunt u uw gewenste radius aanpassen."
           }
         }
       }

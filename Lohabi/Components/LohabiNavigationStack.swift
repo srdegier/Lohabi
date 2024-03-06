@@ -17,7 +17,6 @@ struct LohabiNavigationStack<Content>: View where Content: View {
     var body: some View {
         NavigationStack {
             content
-                .navigationBarTitle("Custom Navigation")
                 .toolbarBackground(
                     BackgroundStyle(),
                     for: .navigationBar)
